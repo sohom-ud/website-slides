@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
+
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -16,8 +17,18 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<p style="color: orangered"><u>Incompressible Navier-Stokes equations</u></p>
+					<p class="fragment fade-up">$\frac{\partial u_i}{\partial t} + u_j\frac{\partial}{\partial x_j}u_i = -\frac{1}{\rho}\frac{\partial p}{\partial x_i} + \nu\frac{\partial^2 u_i}{\partial x_j\partial x_j}$</p>
+					<br><br>
+					<p class="fragment fade-up" style="color: orangered"><u>Incompressibility</u></p>
+					<p class="fragment fade-up">$\frac{\partial u_i}{\partial x_i} = 0$</p>
+					<br>
+				</section>
+				<section>
+					<p style="color: orangered"><u>Reynolds decomposition</u></p>
+					<p>$u_i = \overline{u_i}+u_i',\quad p = \overline{p}+p'$ </p>
+				</section>
 			</div>
 		</div>
 
@@ -25,6 +36,8 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -33,7 +46,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
 			});
 		</script>
 	</body>
